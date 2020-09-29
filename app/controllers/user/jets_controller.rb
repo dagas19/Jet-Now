@@ -12,7 +12,7 @@ class User::JetsController < ApplicationController
       render :new
     end
   end
-   def cocktail_params
+   def jet_params
     params.require(:jet).permit(:model, :max_speed, :max_range, :price_hourly, :fuel_consumption, :description)
   end
 end
