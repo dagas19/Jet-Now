@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'jets/index'
-  get 'jets/show'
+  
   devise_for :users
   root to: 'pages#home'
+
+  resources :jets, only: %i[index show]
+
   namespace :user do
     resources :jets, only: %i[new create]
   end
