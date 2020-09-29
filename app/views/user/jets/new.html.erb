@@ -1,1 +1,12 @@
 <h1>hello</h1>
+<div class="formulaire">
+  <%= simple_form_for(@jet) do |form| %>
+    <%= form.input :model %>
+    <%= form.input :description %>
+    <%= form.input :price_hourly %>
+    <%= form.input :max_speed %>
+    <%= form.input :max_range %>
+    <%= form.input :fuel_consumption %>
+    <%= form.button :submit, class: "btn btn-success" %>
+  <% end %>
+</div>
