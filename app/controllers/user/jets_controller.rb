@@ -1,11 +1,18 @@
 class User::JetsController < ApplicationController
+  def index
+    @jets = Jet.all
+  end
+
+  def show
+    @jet = Jet.find(params[:id])
+  end
+
   def new
     @jet = Jet.new
   end
 
   def create
     @jet = Jet.new(jet_params)
-    @user_id = user.id
     if @jet.save
       redirect_to jet_path(@jet)
     else
