@@ -5,6 +5,7 @@ class User::JetsController < ApplicationController
 
   def create
     @jet = Jet.new(jet_params)
+    @user_id = user.id
     if @jet.save
       redirect_to jet_path(@jet)
     else
