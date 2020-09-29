@@ -1,0 +1,34 @@
+.banner {
+  height: 40vh;
+  background: url("https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/02/Sovereign6Desert-Jet-provides-private-jet-charter-flights-and-aircraft-management-resize.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.banner p {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.bottom {
+  height: 20vh;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.light {
+  border-right: 1px solid white;
+}
+.header-line {
+  display: inline-block;
+  height: 1px;
+  background: #fff;
+  vertical-align: middle;
+  border-right: 1px solid white;
+}

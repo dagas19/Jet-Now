@@ -1,0 +1,23 @@
+<div class="banner">
+</div>
+<div class="bg-primary bottom d flex">
+    <h1 class="text-center mt-5">Jets catalog</h1>
+    <span class="header-line"></span>
+</div>
+<div class="container">
+  <div class="row">
+    <%= @jets.each do |jet| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+     <div class="card text" style="width: 18rem;">
+      <img src="https://txtav.com/-/media/textron-aviation/images/news-events/news-releases/2019/2019_09/citation-longitude-image-2_header.ashx?h=580&w=870&la=en&hash=BB9F91386EA2A8DB643F177CD570DA6536FFE363" class="card-img-top" alt="jet">
+      <div class="card-body">
+        <h5 class="card-title"><%= jet.model %></h5>
+      <div>
+        <a href="#" class="btn btn-primary more">more</a>
+      </div>
+      </div>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>
