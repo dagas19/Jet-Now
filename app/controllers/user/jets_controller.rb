@@ -21,7 +21,22 @@ class User::JetsController < ApplicationController
       render :new
     end
   end
-   def jet_params
+  
+  def edit
+    @jet = Jet.find(params[:id])
+  end
+
+  def update
+    @jet = Jet.find(params[:id])
+    @jet.update(jet_params)
+  end
+
+  def destroy
+    @jet = Jet.find(params[:id])
+    @jet.destroy
+  end
+
+  def jet_params
     params.require(:jet).permit(:model, :max_speed, :max_range, :price_hourly, :fuel_consumption, :description, :photo)
   end
 end
