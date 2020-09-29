@@ -3,5 +3,12 @@ class JetsController < ApplicationController
   end
 
   def show
+  	@jet = Jet.find(params[:id])
+  end
+
+private
+
+  def jet_params
+  	params.require(:jet).permit(:name)
   end
 end
