@@ -13,6 +13,7 @@ class User::JetsController < ApplicationController
 
   def create
     @jet = Jet.new(jet_params)
+    @jet.user = current_user
     if @jet.save
       redirect_to jet_path(@jet)
     else
@@ -21,6 +22,6 @@ class User::JetsController < ApplicationController
     end
   end
    def jet_params
-    params.require(:jet).permit(:model, :max_speed, :max_range, :price_hourly, :fuel_consumption, :description)
+    params.require(:jet).permit(:model, :max_speed, :max_range, :price_hourly, :fuel_consumption, :description, :photo)
   end
 end
