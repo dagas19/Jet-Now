@@ -1,0 +1,27 @@
+.card-img {
+  height: 100%;
+  background-size: cover;
+  margin-bottom: 0;
+}
+.card {
+  height: 100%;
+  width: 500px;
+  position: relative;
+  color: black;
+}
+.card:hover {
+  box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: #45354D
+}
+li {
+  color: #346087;
+}
+.more {
+position: absolute;
+  top:50%;
+  right: 1px;
+}
+.card.text {
+color: #EFEFEF;
+}
