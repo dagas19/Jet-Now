@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
   root to: 'pages#home'
 
-  resources :jets, only: %i[index show]
-
+  resources :jets, only: %i[index show] do
+    resources :bookings, only: %i[new create]
+  end
   namespace :user do
     resources :jets, only: %i[new create]
   end
