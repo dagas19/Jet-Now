@@ -8,3 +8,4 @@
 user  = User.new(password: "blablabla", email: "test@gmail.com")
 user.save
 
+jet = Jet.new(model: "g500", max_speed: 500, max_range: 400, fuel_consumption: 50, description: "very fast and very good")
