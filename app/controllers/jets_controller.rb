@@ -1,6 +1,6 @@
 class JetsController < ApplicationController
   def index
-  	@jet = Jet.all
+  	@jets = Jet.all
   end
 
   def show
