@@ -1,4 +1,19 @@
-<% @bookings.each do |jet| %>
-<%= booking.duration %>
-<%= booking.date %>
-<% end %>
+<div class="container text-dark">
+  <h1>Here are your bookings</h1>
+
+ <div class="container">
+  <div class="row">
+    <% @bookings.each do |b| %>
+      <div class="col-12">
+        <div class="card">
+          <p>Start Date: <%= b.start_date %> </p>
+          <p>End Date: <%= b.end_date %></p>
+          <p>Jet ID: <%= b.jet.id %></p>
+          <p>Booking ID: <%= b.id %></p>
+          <%= link_to "booking details", user_booking_path(b) %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
