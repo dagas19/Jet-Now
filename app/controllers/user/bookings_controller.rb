@@ -2,7 +2,6 @@ class User::BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @testvar = 'test'
-    raise
   end
 
   def show
