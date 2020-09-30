@@ -17,18 +17,20 @@
   font-weight: lighter;
 }
 .bottom {
-  height: 20vh;
+  height: 15vh;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  background-color: #1E4775;
 }
 
 .light {
   border-right: 1px solid white;
 }
+
 .header-line {
   display: inline-block;
   height: 1px;
-  background: #fff;
+  background: #1E4775;
   vertical-align: middle;
   border-right: 1px solid white;
 }
