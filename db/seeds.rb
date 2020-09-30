@@ -103,4 +103,3 @@ booking9 = Booking.create(user: user16 , jet:jet17 , start_date:"2020-12-16" , e
 booking10 = Booking.create(user: user16 , jet:jet60 , start_date:"2020-12-18" , end_date:"2020-12-27")
 
 
-
