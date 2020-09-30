@@ -9,7 +9,7 @@
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="index-jet-card-image" />
             <div class="card-product-infos">
               <h2><%= b.jet.model %> | <span class="location"> <%= b.jet.location %> </span></h2>
-              <p>You're booking starts <span> <%= b.start_date %> </span> and ends <span> <%= b.end_date %></span>.</p>
+              <p>You're booking starts <span class="card-start-date"> <%= b.start_date %> </span> and ends <span> <%= b.end_date %></span>.</p>
               <p>Booking ID: <%= b.id %></p>
             <%= link_to "booking details", user_booking_path(b) %>
             </div>
