@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -91,7 +92,7 @@ jet60 = Jet.create(model: "Embraer Legacy 450", max_speed: 690, max_range: 4400,
 jet61 = Jet.create(model: "Embraer Legacy 500", max_speed: 785, max_range: 6400, fuel_consumption: 48, description: "includes mini-golf", price_hourly: 8200, user: user9,location: "Birmingham", passenger_capacity: 16)
 jet62 = Jet.create(model: "HondaJet Elite", max_speed: 900, max_range: 4400, fuel_consumption: 70, description: "set up as a casino", price_hourly: 8300, user: user8,location: "Cincinatti", passenger_capacity: 11)
 
-booking1 = Booking.create(user: user18 , jet:jet2 , start_date:"2020-11-01" , end_date:"2020-11-05")
+booking1 = Booking.create(user: user18 , jet:jet1 , start_date:"2020-11-01" , end_date:"2020-11-05")
 booking2 = Booking.create(user: user18 , jet:jet4 , start_date:"2020-11-05" , end_date:"2020-11-10")
 booking3 = Booking.create(user: user18 , jet:jet2 , start_date:"2020-11-11" , end_date:"2020-11-15")
 booking4 = Booking.create(user: user18 , jet:jet6 , start_date:"2020-11-21" , end_date:"2020-11-25")
@@ -102,4 +103,22 @@ booking8 = Booking.create(user: user16 , jet:jet10 , start_date:"2020-12-13" , e
 booking9 = Booking.create(user: user16 , jet:jet17 , start_date:"2020-12-16" , end_date:"2020-12-17")
 booking10 = Booking.create(user: user16 , jet:jet60 , start_date:"2020-12-18" , end_date:"2020-12-27")
 
+# add photos to each jet
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601471777/167980_big_tgdjhu.jpg')
+jet1.photo.attach(io: file, filename: '167980_big_tgdjhu.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601473605/Air_Zoo_Learjet_II_b3ptzo.jpg')
+jet2.photo.attach(io: file, filename: 'Air_Zoo_Learjet_II_b3ptzo.jpg', content_type:'image/png')
+
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474025/ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg')
+jet4.photo.attach(io: file, filename: 'ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg', content_type:'image/png')
+
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474109/gulfstream-g600_lgbg81.jpg')
+jet6.photo.attach(io: file, filename: 'gulfstream-g600_lgbg81.jpg', content_type:'image/png')
+
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474202/118421807_o_lticsm.jpg')
+jet9.photo.attach(io: file, filename: '118421807_o_lticsm.jpg', content_type:'image/png')
 
