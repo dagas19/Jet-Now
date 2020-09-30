@@ -14,8 +14,8 @@
           <li><strong> Booking end date :</strong><em><%= @booking.end_date %></em></li>
           <li><strong> Description :</strong><em><%= @booking.jet.description %></em></li>     
         </ul>
-          <div class="cancel d-flex justify-content-end ">
-      <%= link_to "CANCEL", new_jet_booking_path(@booking), class: "btn btn-primary mb-n3" %>
+          <div class="cancel d-flex justify-content-end">
+     <%= link_to "CANCEL", user_booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary mb-n3" %>
       </div>
     </div>
   </div>
