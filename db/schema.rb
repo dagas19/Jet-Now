@@ -37,8 +37,6 @@ ActiveRecord::Schema.define(version: 2020_09_30_075632) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "total_cost"
-    t.integer "duration"
     t.datetime "start_date"
     t.datetime "end_date"
     t.bigint "user_id", null: false
