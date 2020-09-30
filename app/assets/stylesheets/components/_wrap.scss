@@ -1,8 +1,14 @@
 .page-container {
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-content {
+  flex-grow: 1;
 }
 
-.footer-wrap {
+.page-footer {
   bottom: 0px;
 }
