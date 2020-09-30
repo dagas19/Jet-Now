@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.jet_id = params[:jet_id]
     if @booking.save
-      redirect_to path_booking(@booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end

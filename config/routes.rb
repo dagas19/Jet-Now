@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   namespace :user do
     resources :jets, only: %i[new create index show edit destroy]
+    resources :bookings, only: %i[index]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
