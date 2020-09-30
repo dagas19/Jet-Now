@@ -10,6 +10,7 @@
           <p>End Date: <%= b.end_date %></p>
           <p>Jet ID: <%= b.jet.id %></p>
           <p>Booking ID: <%= b.id %></p>
+          <%= link_to "booking details", user_booking_path(b) %>
         </div>
       </div>
       <% end %>
