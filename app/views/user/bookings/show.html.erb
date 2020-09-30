@@ -1,0 +1,22 @@
+<div class="container m-5">
+  <div class="row positioning">
+    <div class="col-6">
+      <img src="https://txtav.com/-/media/textron-aviation/images/news-events/news-releases/2019/2019_09/citation-longitude-image-2_header.ashx?h=580&w=870&la=en&hash=BB9F91386EA2A8DB643F177CD570DA6536FFE363" class="card-img" alt="">
+    </div>
+    <div class="col-6">
+      <h1><% @booking.user %></h1>
+        <ul style="list-style-type:none;">
+          <li><strong> Jet model :</strong><em><%= @booking.jet.model %></em></li>
+          <li><strong> Jet location :</strong><em><%= @booking.jet.location %></em></li>
+          <li><strong> Jet capacity :</strong><em><%= @booking.jet.passenger_capacity %></em></li>
+          <li><strong> Booking ID :</strong><em><%= @booking.jet_id %></em></li>
+          <li><strong> Booking start date :</strong><em><%= @booking.start_date %></em></li>
+          <li><strong> Booking end date :</strong><em><%= @booking.end_date %></em></li>
+          <li><strong> Description :</strong><em><%= @booking.jet.description %></em></li>     
+        </ul>
+          <div class="cancel d-flex justify-content-end ">
+      <%= link_to "CANCEL", new_jet_booking_path(@booking), class: "btn btn-primary mb-n3" %>
+      </div>
+    </div>
+  </div>
+</div>
