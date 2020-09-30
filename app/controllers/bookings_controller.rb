@@ -1,30 +1,22 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.all
-  end
-
-  def show
-    @bookings = Booking.find(params[id])
-  end
 
   def new
+    @jet = Jet.find(params[:jet_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.jet_id = params[:jet_id]
     if @booking.save
-      redirect_to path_booking(@booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
   end
 
-  def destroy
-    @booking = booking.find(params[:id])
-    @booking.destroy
-    redirect_to jets_path(@booking.jet)
+  def booking_params
+    params.require(:booking).permit(:date, :duration, :total_cost)
   end
-
-  params.require(:booking).permit(:user_id, :jet_id)
 end
