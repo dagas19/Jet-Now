@@ -91,16 +91,16 @@ jet60 = Jet.create(model: "Embraer Legacy 450", max_speed: 690, max_range: 4400,
 jet61 = Jet.create(model: "Embraer Legacy 500", max_speed: 785, max_range: 6400, fuel_consumption: 48, description: "includes mini-golf", price_hourly: 8200, user: user9,location: "Birmingham", passenger_capacity: 16)
 jet62 = Jet.create(model: "HondaJet Elite", max_speed: 900, max_range: 4400, fuel_consumption: 70, description: "set up as a casino", price_hourly: 8300, user: user8,location: "Cincinatti", passenger_capacity: 11)
 
-booking1 = Booking.create(user: user18 , jet:jet1 , start_date:"2020-11-01" , end_date:"2020-11-05")
-booking2 = Booking.create(user: user18 , jet:jet2 , start_date:"2020-11-05" , end_date:"2020-11-10")
-booking3 = Booking.create(user: user18 , jet:jet3 , start_date:"2020-11-11" , end_date:"2020-11-15")
-booking4 = Booking.create(user: user18 , jet:jet4 , start_date:"2020-11-21" , end_date:"2020-11-25")
-booking5 = Booking.create(user: user17 , jet:jet5 , start_date:"2020-12-01" , end_date:"2020-12-05")
-booking6 = Booking.create(user: user17 , jet:jet6 , start_date:"2020-12-06" , end_date:"2020-12-07")
+booking1 = Booking.create(user: user18 , jet:jet2 , start_date:"2020-11-01" , end_date:"2020-11-05")
+booking2 = Booking.create(user: user18 , jet:jet4 , start_date:"2020-11-05" , end_date:"2020-11-10")
+booking3 = Booking.create(user: user18 , jet:jet2 , start_date:"2020-11-11" , end_date:"2020-11-15")
+booking4 = Booking.create(user: user18 , jet:jet6 , start_date:"2020-11-21" , end_date:"2020-11-25")
+booking5 = Booking.create(user: user17 , jet:jet4 , start_date:"2020-12-01" , end_date:"2020-12-05")
+booking6 = Booking.create(user: user17 , jet:jet9 , start_date:"2020-12-06" , end_date:"2020-12-07")
 booking7 = Booking.create(user: user16 , jet:jet7 , start_date:"2020-12-09" , end_date:"2020-12-12")
-booking8 = Booking.create(user: user16 , jet:jet8 , start_date:"2020-12-13" , end_date:"2020-12-15")
-booking9 = Booking.create(user: user16 , jet:jet9 , start_date:"2020-12-16" , end_date:"2020-12-17")
-booking10 = Booking.create(user: user16 , jet:jet10 , start_date:"2020-12-18" , end_date:"2020-12-27")
+booking8 = Booking.create(user: user16 , jet:jet10 , start_date:"2020-12-13" , end_date:"2020-12-15")
+booking9 = Booking.create(user: user16 , jet:jet17 , start_date:"2020-12-16" , end_date:"2020-12-17")
+booking10 = Booking.create(user: user16 , jet:jet60 , start_date:"2020-12-18" , end_date:"2020-12-27")
 
 
 
