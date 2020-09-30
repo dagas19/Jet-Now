@@ -6,25 +6,25 @@
 .card {
   width: 500px;
   position: relative;
-  color: black;
+  color: #45354D;
   overflow: hidden;
 }
 .card:hover {
   box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
-  color: white;
-  background-color: #1E4775;
+  color: #45354D;
+  background-color: white;
   .card-img-top {
     opacity: .8;
   }
 }
 li {
-  color: #1E4775;
+  color: #45354D;
 }
 .more {
 position: absolute;
   top:50%;
   right: 1px;
-  background-color: #1E4775;
+  background-color: #45354D;
 }
 .card.text {
 color: #EFEFEF;
