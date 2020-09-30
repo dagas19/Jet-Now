@@ -1,13 +1,19 @@
-<h1>hello</h1>
-<div class="formulaire">
-  <%= simple_form_for [:user, @jet] do |f| %>
-    <%= f.input :model %>
-    <%= f.input :description %>
-    <%= f.input :price_hourly %>
-    <%= f.input :max_speed %>
-    <%= f.input :max_range %>
-    <%= f.input :fuel_consumption %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "btn btn-success" %>
-  <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>hello</h1>
+      <div class="formulaire">
+        <%= simple_form_for [:user, @jet] do |f| %>
+          <%= f.input :model %>
+          <%= f.input :description %>
+          <%= f.input :price_hourly %>
+          <%= f.input :max_speed %>
+          <%= f.input :max_range %>
+          <%= f.input :fuel_consumption %>
+          <%= f.input :photo, as: :file %>
+          <%= f.button :submit, class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
