@@ -4,24 +4,35 @@
   margin-bottom: 0;
 }
 .card {
-  height: 100%;
   width: 500px;
   position: relative;
   color: black;
+  overflow: hidden;
 }
 .card:hover {
   box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
   color: white;
-  background-color: #45354D
+  background-color: #1E4775;
+  .card-img-top {
+    opacity: .8;
+  }
 }
 li {
-  color: #346087;
+  color: #1E4775;
 }
 .more {
 position: absolute;
   top:50%;
   right: 1px;
+  background-color: #1E4775;
 }
 .card.text {
 color: #EFEFEF;
+}
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: gray;
 }
