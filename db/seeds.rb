@@ -30,13 +30,13 @@ user17 = User.create(password: "Portugal", email: "Kenneth@gmail.com")
 user18 = User.create(password: "covid19sdf", email: "Oliver@gmail.com")
 
 
-jet1 = Jet.create(model: "Grumman Gulfstream II", max_speed: 501, max_range: 2000, fuel_consumption: 50, description: "set up with horizontal sleeping positions and shower", price_hourly: 5000, user: user1,location: "London", passenger_capacity: 10)
+jet1 = Jet.create(model: "Dassault Falcon 6X", max_speed: 740, max_range: 3400, fuel_consumption: 55, description: "includes music recording studio", price_hourly: 6200, user: user8,location: "Paris", passenger_capacity: 5)
 jet2 = Jet.create(model: "Learjet 23", max_speed: 600, max_range: 2510, fuel_consumption: 40, description: "set up with bar and conference table", price_hourly: 2000, user: user2,location: "Paris", passenger_capacity: 10)
 jet3 = Jet.create(model: "Global 7500", max_speed: 500, max_range: 2400, fuel_consumption: 70, description: "set up with snooker table", price_hourly: 7000, user: user3,location: "Rome", passenger_capacity: 5)
 jet4 = Jet.create(model: "Cessna Citation Longitude", max_speed: 550, max_range: 4000, fuel_consumption: 90, description: "comes with Michel star chef", price_hourly: 8000, user: user3,location: "Paris", passenger_capacity: 15)
 jet5 = Jet.create(model: "Pilatus PC-24", max_speed: 590, max_range: 4200, fuel_consumption: 35, description: "set up for yoga studio", price_hourly: 2900, user: user3,location: "Rome", passenger_capacity: 15)
-jet6 = Jet.create(model: "Gulfstream G600", max_speed: 700, max_range: 3000, fuel_consumption: 70, description: "includes gym and sauna", price_hourly: 4200, user: user7,location: "London", passenger_capacity: 10)
-jet7 = Jet.create(model: "Dassault Falcon 6X", max_speed: 740, max_range: 3400, fuel_consumption: 55, description: "includes music recording studio", price_hourly: 6200, user: user8,location: "Paris", passenger_capacity: 5)
+jet6 = Jet.create(model: "HondaJet Elite", max_speed: 900, max_range: 4400, fuel_consumption: 70, description: "set up as a casino", price_hourly: 8300, user: user1,location: "Paris", passenger_capacity: 5)
+jet7 = Jet.create(model: "Grumman Gulfstream II", max_speed: 501, max_range: 2000, fuel_consumption: 50, description: "set up with horizontal sleeping positions and shower", price_hourly: 5000, user: user1,location: "London", passenger_capacity: 10)
 jet8 = Jet.create(model: "Phenom 100V+", max_speed: 680, max_range: 3600, fuel_consumption: 40, description: "includes DJ, bar and bouncer", price_hourly: 5200, user: user7,location: "London", passenger_capacity: 10)
 jet9 = Jet.create(model: "Embraer Legacy 700", max_speed: 640, max_range: 5400, fuel_consumption: 39, description: "includes playstation 4 and xbox", price_hourly: 6200, user: user15,location: "Rome", passenger_capacity: 10)
 jet10 = Jet.create(model: "Dassault Falcon 50", max_speed: 620, max_range: 4400, fuel_consumption: 52, description: "includes access to private villa in Portugal", price_hourly: 7200, user: user3,location: "London", passenger_capacity: 5)
@@ -50,7 +50,7 @@ jet17 = Jet.create(model: "SyberJet SJ30i", max_speed: 654, max_range: 2900, fue
 jet18 = Jet.create(model: "Cessna Citation CJ3+/4", max_speed: 667, max_range: 3400, fuel_consumption: 85, description: "only available for 14 day bookings", price_hourly: 4200, user: user6,location: "Rome", passenger_capacity: 15)
 jet19 = Jet.create(model: "Embraer Legacy 450", max_speed: 690, max_range: 4400, fuel_consumption: 51, description: "set-up for ball-room dancing", price_hourly: 7200, user: user7,location: "Rome", passenger_capacity: 10)
 jet20 = Jet.create(model: "Embraer Legacy 500", max_speed: 785, max_range: 6400, fuel_consumption: 48, description: "includes mini-golf", price_hourly: 8200, user: user3,location: "London", passenger_capacity: 5)
-jet21 = Jet.create(model: "HondaJet Elite", max_speed: 900, max_range: 4400, fuel_consumption: 70, description: "set up as a casino", price_hourly: 8300, user: user1,location: "Paris", passenger_capacity: 5)
+jet21 = Jet.create(model: "Gulfstream G600", max_speed: 700, max_range: 3000, fuel_consumption: 70, description: "includes gym and sauna", price_hourly: 4200, user: user7,location: "London", passenger_capacity: 10)
 # jet22 = Jet.create(model: "Grumman Gulfstream II", max_speed: 501, max_range: 2000, fuel_consumption: 50, description: "set up with horizontal sleeping positions and shower", price_hourly: 5000, user: user1,location: "Chicago", passenger_capacity: 7)
 # jet23 = Jet.create(model: "Learjet 23", max_speed: 600, max_range: 2510, fuel_consumption: 40, description: "set up with bar and conference table", price_hourly: 2000, user: user2,location: "Mexico City", passenger_capacity: 8)
 # jet24 = Jet.create(model: "Global 7500", max_speed: 500, max_range: 2400, fuel_consumption: 70, description: "set up with snooker table", price_hourly: 7000, user: user3,location: "Singapore", passenger_capacity: 7)
@@ -105,11 +105,11 @@ booking9 = Booking.create(user: user16 , jet:jet17 , start_date:"2020-12-16" , e
 booking10 = Booking.create(user: user16 , jet:jet21 , start_date:"2020-12-18" , end_date:"2020-12-27")
 
 # add photos to each jet
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601471777/167980_big_tgdjhu.jpg')
-jet1.photo.attach(io: file, filename: '167980_big_tgdjhu.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541406/DA00031637_S_jjqita.jpg')
+jet1.photo.attach(io: file, filename: 'v1601541406/DA00031637_S_jjqita.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601473605/Air_Zoo_Learjet_II_b3ptzo.jpg')
-jet2.photo.attach(io: file, filename: 'Air_Zoo_Learjet_II_b3ptzo.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601552826/56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg')
+jet2.photo.attach(io: file, filename: '56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541073/global-7500-bombardier-belly_murbic.jpg')
 jet3.photo.attach(io: file, filename: 'global-7500-bombardier-belly_murbic.jpg', content_type:'image/png')
@@ -120,11 +120,11 @@ jet4.photo.attach(io: file, filename: 'ultimate-jet-news-Cessna-Citation-Longitu
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541215/85600_1567628467_msjnsq.jpg')
 jet5.photo.attach(io: file, filename: '85600_1567628467_msjnsq.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474109/gulfstream-g600_lgbg81.jpg')
-jet6.photo.attach(io: file, filename: 'gulfstream-g600_lgbg81.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543158/5c784e0126289855b3078b17_nymqhu.jpg')
+jet6.photo.attach(io: file, filename: 'v1601543158/5c784e0126289855b3078b17_nymqhu.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541406/DA00031637_S_jjqita.jpg')
-jet7.photo.attach(io: file, filename: 'v1601541406/DA00031637_S_jjqita.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601553247/grumman-gulfstream-ii-fac599b2-49eb-4ef0-a576-8245d53b992-resize-750_pyjj1e.jpg')
+jet7.photo.attach(io: file, filename: 'grumman-gulfstream-ii-fac599b2-49eb-4ef0-a576-8245d53b992-resize-750_pyjj1e.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541562/OO-FLN_mubc8m.jpg')
 jet8.photo.attach(io: file, filename: 'v1601541562/OO-FLN_mubc8m.jpg', content_type:'image/png')
@@ -141,8 +141,8 @@ jet11.photo.attach(io: file, filename: 'cirrus-vision-sf50_nlu9xw.jpg', content_
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541978/CitationX-Ext-JS-1200x600_ekll5r.jpg')
 jet12.photo.attach(io: file, filename: 'CitationX-Ext-JS-1200x600_ekll5r.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542103/legacy-600-exterior_glwpoy.jpg')
-jet13.photo.attach(io: file, filename: 'legacy-600-exterior_glwpoy.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601552948/Legacy600_2880x1440_t3aoq2.jpg')
+jet13.photo.attach(io: file, filename: 'Legacy600_2880x1440_t3aoq2.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542260/cessna-citation-columbus_21826_w1gitw.jpg')
 jet14.photo.attach(io: file, filename: 'cessna-citation-columbus_21826_w1gitw.jpg', content_type:'image/png')
@@ -165,8 +165,9 @@ jet19.photo.attach(io: file, filename: 'legacy_450-in-flight_mbsvbs.jpg', conten
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543069/643616_embraer20legacy2050020ex_tcm61-3856_ceykih.jpg')
 jet20.photo.attach(io: file, filename: '643616_embraer20legacy2050020ex_tcm61-3856_ceykih.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543158/5c784e0126289855b3078b17_nymqhu.jpg')
-jet21.photo.attach(io: file, filename: 'v1601543158/5c784e0126289855b3078b17_nymqhu.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474109/gulfstream-g600_lgbg81.jpg')
+jet21.photo.attach(io: file, filename: 'gulfstream-g600_lgbg81.jpg', content_type:'image/png')
+
 
 
 
