@@ -2,9 +2,10 @@
   height: 100%;
   background-size: cover;
   margin-bottom: 0;
+  filter: sepia(60%);
 }
 .card {
-  width: 500px;
+  width: 200px;
   position: relative;
   color: #45354D;
   overflow: hidden;
@@ -13,17 +14,23 @@
   box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
   color: #45354D;
   background-color: white;
-  .card-img-top {
-    opacity: .8;
+  .hover {
+    filter: sepia(100%) brightness(35%) hue-rotate(180deg);
   }
 }
 li {
   color: #45354D;
 }
+
+.card-body {
+  background-color: #E8E8E8;
+  opacity: 0.5;
+}
 .more {
-position: absolute;
-  top:50%;
-  right: 1px;
+  position: absolute;
+  border-radius: 0;
+  top:40%;
+  right: -5px;
   background-color: #45354D;
 }
 .card.text {
@@ -34,5 +41,21 @@ color: #EFEFEF;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  color: gray;
+  color: black;
 }
+
+.spec {
+ position: relative;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid black;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top:150px;
+  right: -5px;
+    }
+

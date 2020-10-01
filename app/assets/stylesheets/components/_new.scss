@@ -1,0 +1,24 @@
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.package-type-gimmick {
+    width: 0px;
+    height: 0px;
+    float: right;
+    border-width: 8px 8px 0px 0px;
+    border-style: solid;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.package-type {
+    padding: 9px 12px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+}
