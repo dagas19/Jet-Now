@@ -111,15 +111,63 @@ jet1.photo.attach(io: file, filename: '167980_big_tgdjhu.jpg', content_type:'ima
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601473605/Air_Zoo_Learjet_II_b3ptzo.jpg')
 jet2.photo.attach(io: file, filename: 'Air_Zoo_Learjet_II_b3ptzo.jpg', content_type:'image/png')
 
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541073/global-7500-bombardier-belly_murbic.jpg')
+jet3.photo.attach(io: file, filename: 'global-7500-bombardier-belly_murbic.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474025/ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg')
 jet4.photo.attach(io: file, filename: 'ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg', content_type:'image/png')
 
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541215/85600_1567628467_msjnsq.jpg')
+jet5.photo.attach(io: file, filename: '85600_1567628467_msjnsq.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474109/gulfstream-g600_lgbg81.jpg')
 jet6.photo.attach(io: file, filename: 'gulfstream-g600_lgbg81.jpg', content_type:'image/png')
 
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541406/DA00031637_S_jjqita.jpg')
+jet7.photo.attach(io: file, filename: 'v1601541406/DA00031637_S_jjqita.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541562/OO-FLN_mubc8m.jpg')
+jet8.photo.attach(io: file, filename: 'v1601541562/OO-FLN_mubc8m.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474202/118421807_o_lticsm.jpg')
 jet9.photo.attach(io: file, filename: '118421807_o_lticsm.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541759/Dassault-Falcon-50-1280x1024_vhlzn1.jpg')
+jet10.photo.attach(io: file, filename: 'Dassault-Falcon-50-1280x1024_vhlzn1.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541896/cirrus-vision-sf50_nlu9xw.jpg')
+jet11.photo.attach(io: file, filename: 'cirrus-vision-sf50_nlu9xw.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541978/CitationX-Ext-JS-1200x600_ekll5r.jpg')
+jet12.photo.attach(io: file, filename: 'CitationX-Ext-JS-1200x600_ekll5r.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542103/legacy-600-exterior_glwpoy.jpg')
+jet13.photo.attach(io: file, filename: 'legacy-600-exterior_glwpoy.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542260/cessna-citation-columbus_21826_w1gitw.jpg')
+jet14.photo.attach(io: file, filename: 'cessna-citation-columbus_21826_w1gitw.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542371/Aerion_AS2_7_HR_ya8l3i.jpg')
+jet15.photo.attach(io: file, filename: 'Aerion_AS2_7_HR_ya8l3i.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542506/Falcon-LX_hh3for.jpg')
+jet16.photo.attach(io: file, filename: 'Falcon-LX_hh3for.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542617/syberjet-c-cillypix_79190_eps6py.jpg')
+jet17.photo.attach(io: file, filename: 'syberjet-c-cillypix_79190_eps6py.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542732/cessna-citation-cj3-4_qpkkyj.jpg')
+jet18.photo.attach(io: file, filename: 'cessna-citation-cj3-4_qpkkyj.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601542899/legacy_450-in-flight_mbsvbs.jpg')
+jet19.photo.attach(io: file, filename: 'legacy_450-in-flight_mbsvbs.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543069/643616_embraer20legacy2050020ex_tcm61-3856_ceykih.jpg')
+jet20.photo.attach(io: file, filename: '643616_embraer20legacy2050020ex_tcm61-3856_ceykih.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543158/5c784e0126289855b3078b17_nymqhu.jpg')
+jet21.photo.attach(io: file, filename: 'v1601543158/5c784e0126289855b3078b17_nymqhu.jpg', content_type:'image/png')
+
+
+
 
