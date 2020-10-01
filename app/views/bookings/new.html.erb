@@ -1,16 +1,12 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <h1>hello</h1>
-      <div class="formulaire">
-        <%= simple_form_for [@jet, @booking] do |f| %>
-          <%= f.input :start_date, label: "Dates" %>
-          <%= f.input :end_date, label: '&nbsp;'.html_safe, placeholder: "To" %>
-          <%= f.button :submit, class: "btn btn-success" %>
-        <% end %>
-      </div>
+<div class="dates">
+  <div class="form-inputs">
+    <div class="form-row justify-content-center">
+      <%= simple_form_for([@jet, @booking]) do |f| %>
+        <%= f.input :start_date, as: :string, label: "Date from", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
+        <%= f.input :end_date, as: :string, label: 'Date to'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
+        <%= f.submit "book", class: "btn btn-primary btn-lg btn-block btn-booking" %>
+      <% end %>
     </div>
   </div>
 </div>
-
-
+<div class="widget-content" data-unavailable="<%= @jet.unavailable_dates.to_json %>">
