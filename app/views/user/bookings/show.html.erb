@@ -1,7 +1,11 @@
 <div class="container m-5">
   <div class="row positioning">
     <div class="col-6">
-      <img src="https://txtav.com/-/media/textron-aviation/images/news-events/news-releases/2019/2019_09/citation-longitude-image-2_header.ashx?h=580&w=870&la=en&hash=BB9F91386EA2A8DB643F177CD570DA6536FFE363" class="card-img" alt="">
+      <% if b.jet.photo.attached? %>
+      <%= cl_image_tag b.jet.photo.key %>
+      <% else %>
+      <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn-image.departures.com%2Fsites%2Fdefault%2Ffiles%2F1572446921%2Fheader-general-private-jet-on-tarmac-BESTJETCOMP1019.jpg&imgrefurl=https%3A%2F%2Fwww.departures.com%2Ftravel%2Ftop-private-jet-companies-to-know&tbnid=TTpAbWa5oorIZM&vet=12ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ..i&docid=DLeHzjzHiNI-bM&w=2000&h=1333&q=private%20jet%20plane&ved=2ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ" />
+      <% end %>
     </div>
     <div class="col-6">
       <h1><% @booking.user %></h1>
