@@ -1,6 +1,7 @@
 class User::JetsController < ApplicationController
   def index
-    @jets = Jet.where(user: current_user)
+    # @jets = Jet.where(user: current_user)
+    @jets = policy_scope([:user, Jet.where(user: current_user)])
   end
 
   def show
@@ -15,6 +16,7 @@ class User::JetsController < ApplicationController
   def create
     @jet = Jet.new(jet_params)
     @jet.user = current_user
+    authorize [:user, @jet]
     if @jet.save
       redirect_to user_jets_path
     else

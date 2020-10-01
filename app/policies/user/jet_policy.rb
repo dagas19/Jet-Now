@@ -1,12 +1,11 @@
 class User::JetPolicy < ApplicationPolicy
-
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def new?
+  def create?
     true
   end
 end
