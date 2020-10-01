@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-6">
-      <h1>Enter your jet details</h1>
+    <div class="col-6 display-block-inline">
+      <h1>Edit your jet details</h1>
       <div class="formulaire">
         <%= simple_form_for [:user, @jet] do |f| %>
           <%= f.input :model, label: "Model" %>
@@ -15,6 +15,9 @@
           <%= f.input :photo, as: :file %>
           <%= f.button :submit, class: "btn btn-success" %>
         <% end %>
+        <div>
+          <%= link_to "Remove my jet", user_jet_path(@jet), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning mb-n3" %>
+        </div>
       </div>
     </div>
   </div>
