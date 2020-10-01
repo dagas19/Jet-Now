@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users #John: What does this line do??
   root to: 'pages#home'
 
   resources :jets, only: %i[index show] do
