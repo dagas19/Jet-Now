@@ -1,6 +1,6 @@
 class User::JetsController < ApplicationController
   def index
-    @jets = Jet.all
+    @jets = Jet.where(user: current_user)
   end
 
   def show
