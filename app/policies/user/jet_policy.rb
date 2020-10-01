@@ -5,4 +5,8 @@ class User::JetPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def new?
+    true
+  end
 end
