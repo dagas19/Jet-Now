@@ -1,6 +1,6 @@
 class User::JetsController < ApplicationController
   def index
-    @jets = Jet.all
+    @jets = Jet.where(user: current_user)
   end
 
   def show
@@ -21,7 +21,7 @@ class User::JetsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @jet = Jet.find(params[:id])
   end
