@@ -9,6 +9,7 @@ class User::JetsController < ApplicationController
 
   def new
     @jet = Jet.new
+    authorize [:user, @jet]
   end
 
   def create
