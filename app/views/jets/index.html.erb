@@ -5,15 +5,25 @@
     <h3 class="text-center">Jets Catalog</h3>
   </div>
 </div>
-<div class="container justify-content-center">
-    <%= simple_form_for "", url: jets_path, method: :get, wrapper: :inline_form,
-  html: { class: "form-inline" },
+<div class="container bord">
+    <%= simple_form_for "", url: jets_path, method: :get, wrapper: :horizontal_form,
   wrapper_mappings: {
-    boolean: :inline_boolean
+    boolean:       :horizontal_boolean,
+    check_boxes:   :horizontal_collection,
+    date:          :horizontal_multi_select,
+    datetime:      :horizontal_multi_select,
+    file:          :horizontal_file,
+    radio_buttons: :horizontal_collection,
+    range:         :horizontal_range,
+    time:          :horizontal_multi_select
   } do |f| %>
-      <%= f.input :passenger, as: :radio_buttons, collection: Jet::PASSENGERS %>
-      <%= f.input :city, placeholder: "please select city" , collection: Jet::LOCATIONS, prompt: :translate %>
-      <%= f.submit %>
+      <%= f.input :passenger, as: :radio_buttons, collection: Jet::PASSENGERS, wrapper: :horizontal_collection_inline %>
+      <%= f.input :city, value: "please select city", collection: Jet::LOCATIONS, prompt: :translate %>
+      <div class="form-group row mb-0">
+        <div class="col-sm-9 offset-sm-3">
+      <%= f.submit class: "btn-primary", value: "Search" %>
+      </div>
+  </div>
     <% end %>
 </div>
 <div class="container">
