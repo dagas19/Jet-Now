@@ -27,10 +27,13 @@ class User::JetsController < ApplicationController
 
   def edit
     @jet = Jet.find(params[:id])
+    authorize @jet
   end
 
   def update
     @jet = Jet.find(params[:id])
+    authorize [:user, @jet]
+
     if @jet.update(jet_params)
       redirect_to user_jets_path(@jet)
     end
@@ -38,6 +41,8 @@ class User::JetsController < ApplicationController
 
   def destroy
     @jet = Jet.find(params[:id])
+    authorize [:user, @jet]
+
     if @jet.destroy
       redirect_to jets_path
     end

@@ -1,16 +1,12 @@
-class User::JetPolicy < ApplicationPolicy
+class User::BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def create?
+  def show?
     true
-  end
-
-  def edit?
-    destroy?
   end
 
   def destroy?
@@ -20,4 +16,8 @@ class User::JetPolicy < ApplicationPolicy
       false
     end
   end
+
 end
+
+
+

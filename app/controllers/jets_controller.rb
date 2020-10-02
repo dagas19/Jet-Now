@@ -3,12 +3,15 @@ class JetsController < ApplicationController
 
 
   def index
-  	@jets = Jet.all
+  	# @jets = Jet.all
+    @jets = policy_scope(Jet)
+
   end
 
   def show
     @booking = Booking.new
   	@jet = Jet.find(params[:id])
+    authorize @jet
   end
 
 private
