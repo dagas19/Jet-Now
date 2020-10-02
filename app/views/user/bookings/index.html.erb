@@ -8,9 +8,15 @@
 </div>
 <div class="container text-dark mb-5">
   <% if @bookings.count == 0 %>
-    <div class="no-jets">
-      <h4 class="mt-5">You do not have any bookings yet<span>...</span></h4>
-      <%= link_to 'Book a Jet', new_jet_booking_path, :class => "btn btn-primary" %>
+    <div class="no-jets d-flex pl-3 pr-3 pb-5">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h4 class="mt-5 d">You <head></head>have no bookings yet<span>...</span></h4>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <%= link_to 'Book a Jet', jets_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
     </div>
   <% else %>
     <div class="yes-jets">
