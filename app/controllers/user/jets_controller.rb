@@ -1,6 +1,7 @@
 class User::JetsController < ApplicationController
   def index
-    @jets = Jet.where(user: current_user)
+    # @jets = Jet.where(user: current_user)
+    @jets = policy_scope([:user, Jet.where(user: current_user)])
   end
 
   def show
@@ -9,11 +10,13 @@ class User::JetsController < ApplicationController
 
   def new
     @jet = Jet.new
+    authorize [:user, @jet]
   end
 
   def create
     @jet = Jet.new(jet_params)
     @jet.user = current_user
+    authorize [:user, @jet]
     if @jet.save
       redirect_to user_jets_path
     else
@@ -24,10 +27,13 @@ class User::JetsController < ApplicationController
 
   def edit
     @jet = Jet.find(params[:id])
+    authorize @jet
   end
 
   def update
     @jet = Jet.find(params[:id])
+    authorize [:user, @jet]
+
     if @jet.update(jet_params)
       redirect_to user_jets_path(@jet)
     end
@@ -35,6 +41,8 @@ class User::JetsController < ApplicationController
 
   def destroy
     @jet = Jet.find(params[:id])
+    authorize [:user, @jet]
+
     if @jet.destroy
       redirect_to jets_path
     end

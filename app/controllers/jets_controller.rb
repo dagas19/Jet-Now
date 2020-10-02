@@ -3,7 +3,7 @@ class JetsController < ApplicationController
 
 
   def index
-    @jets = Jet.all
+    @jets = policy_scope(Jet)
     if search_params_present?
       @passenger = search_params[:passenger]
       @location = search_params[:city]
@@ -14,6 +14,7 @@ class JetsController < ApplicationController
   def show
     @booking = Booking.new
   	@jet = Jet.find(params[:id])
+    authorize @jet
   end
 
 private
