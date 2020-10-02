@@ -9,7 +9,7 @@
   </div>
 </div>
 <div class="container mt-3">
-    <%= simple_form_for "", url: jets_path, wrapper: :inline_form,
+    <%= simple_form_for "", method: :get, url: jets_path, wrapper: :inline_form,
   html: { class: "form-inline" },
   wrapper_mappings: {
     boolean: :inline_boolean
