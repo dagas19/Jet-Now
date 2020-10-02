@@ -1,5 +1,5 @@
 class Jet < ApplicationRecord
-  LOCATIONS = ["London", "Paris", "Oslo"]
+  LOCATIONS = ["London", "Paris", "Rome"]
   PASSENGERS = [5, 10, 15]
 
   belongs_to :user
