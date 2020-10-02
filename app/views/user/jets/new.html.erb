@@ -33,7 +33,7 @@
               <%= f.input :fuel_consumption, label: "Consumption", placeholder: "e.g. 25l/km" %>
             </div>
           </div>
-          <%= f.input :location, placeholder: "(km/h)" %>
+          <%= f.input :location, collection: Jet::LOCATIONS, prompt: :translate %>
           <%= f.input :photo, as: :file %>
           <%= f.input :description, label: "Description about the jet", placeholder: "e.g. Very nice and cosy jet, also very fast and quiet" %>
           <%= f.button :submit, value: "Post my jet", class: "btn btn-primary btn-lg mb-5" %>
