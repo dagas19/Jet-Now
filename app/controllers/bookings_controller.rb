@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
   def new
     @jet = Jet.find(params[:jet_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def show
@@ -14,6 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.jet_id = params[:jet_id]
+    authorize @booking
     if @booking.save
       redirect_to user_bookings_path
     else
