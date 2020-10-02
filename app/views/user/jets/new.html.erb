@@ -2,18 +2,33 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <h1 class="m-3">Enter your jet details</h1>
-        <%= simple_form_for [:user, @jet] do |f| %>
+
+          </div><%= simple_form_for [:user, @jet] do |f| %>
           <%= f.error_notification %>
-          <%= f.input :model, class: "form-control font-weight-bold" %>
-          <%= f.input :description, label: "Description about the jet" %>
-          <%= f.input :price_hourly, label: "Price hourly $" %>
-          <%= f.input :max_speed, label: "Maximum speed km/h"%>
-          <%= f.input :passenger_capacity %>
-          <%= f.input :max_range, label: "Maximum range in meters" %>
-          <%= f.input :fuel_consumption, label: "Fuel consumption l/km" %>
-          <%= f.input :location %>
+          <%= f.input :model, class: "form-control font-weight-bold", placeholder: "e.g. Tenika 5000" %>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :price_hourly, label: "Price hourly $", placeholder: "e.g. 190$" %>
+            </div>
+            <div class="col-6">
+              <%= f.input :max_speed, label: "Maximum speed", placeholder: "e.g. 900km/h" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <%= f.input :passenger_capacity, label: "capacity", placeholder: "e.g. 15 seats"%>
+            </div>
+            <div class="col-4">
+               <%= f.input :max_range, label: "Range", placeholder: "e.g. 3000km" %>
+            </div>
+            <div class="col-4">
+              <%= f.input :fuel_consumption, label: "Consumption", placeholder: "e.g. 25l/km" %>
+            </div>
+          </div>
+          <%= f.input :location, placeholder: "(km/h)" %>
           <%= f.input :photo, as: :file %>
-          <%= f.button :submit, class: "btn btn-success btn-lg btn-block" %>
+          <%= f.input :description, label: "Description about the jet", placeholder: "e.g. Very nice and cosy jet, also very fast and quiet" %>
+          <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
         <% end %>
     </div>
   </div>
