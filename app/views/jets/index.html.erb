@@ -32,8 +32,8 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <% @jets.each do |jet| %>
-    <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 spec">
-      <div class="card text" style="width: 16rem; height: 19rem;">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 spec">
+      <div id="d" class="card text" style="width: 16rem; height: 19rem;">
         <% if jet.photo.attached? %>
         <%= cl_image_tag jet.photo.key, width: 600, height: 200, crop: :fit, class: "hover" %>
         <% else %>
@@ -52,3 +52,8 @@
     <% end %>
   </div>
 </div>
+<script type="text/javascript">
+    document.getElementById("d").onclick = function () {
+        location.href = "http://localhost:3000/jets/1";
+    };
+</script>

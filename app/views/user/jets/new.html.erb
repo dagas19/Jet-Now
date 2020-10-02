@@ -1,20 +1,10 @@
-<div class="container">
+<div class="container bord">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1>Enter your jet details</h1>
-      <div class="formulaire">
-        <%= simple_form_for [:user, @jet],wrapper: :horizontal_form,
-  wrapper_mappings: {
-    boolean:       :horizontal_boolean,
-    check_boxes:   :horizontal_collection,
-    date:          :horizontal_multi_select,
-    datetime:      :horizontal_multi_select,
-    file:          :horizontal_file,
-    radio_buttons: :horizontal_collection,
-    range:         :horizontal_range,
-    time:          :horizontal_multi_select
-  } do |f| %>
-          <%= f.input :model, label: "Model" %>
+      <h1 class="m-3">Enter your jet details</h1>
+        <%= simple_form_for [:user, @jet] do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :model, class: "form-control font-weight-bold" %>
           <%= f.input :description, label: "Description about the jet" %>
           <%= f.input :price_hourly, label: "Price hourly $" %>
           <%= f.input :max_speed, label: "Maximum speed km/h"%>
@@ -23,9 +13,8 @@
           <%= f.input :fuel_consumption, label: "Fuel consumption l/km" %>
           <%= f.input :location %>
           <%= f.input :photo, as: :file %>
-          <%= f.button :submit, class: "btn btn-success" %>
+          <%= f.button :submit, class: "btn btn-success btn-lg btn-block" %>
         <% end %>
-      </div>
     </div>
   </div>
 </div>
