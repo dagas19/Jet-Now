@@ -33,3 +33,4 @@ document.addEventListener('turbolinks:load', () => {
   toggleDateInputs();
 });
 
+
