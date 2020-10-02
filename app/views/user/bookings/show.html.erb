@@ -1,26 +1,30 @@
 <div class="container m-5">
-  <div class="row positioning">
-    <div class="col-6">
+   <div class="row">
+      <div class="col-8">
       <% if @booking.jet.photo.attached? %>
-      <%= cl_image_tag @booking.jet.photo.key %>
+      <%= cl_image_tag @booking.jet.photo.key, width: 700, height: 550, crop: :fit %>
       <% else %>
       <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn-image.departures.com%2Fsites%2Fdefault%2Ffiles%2F1572446921%2Fheader-general-private-jet-on-tarmac-BESTJETCOMP1019.jpg&imgrefurl=https%3A%2F%2Fwww.departures.com%2Ftravel%2Ftop-private-jet-companies-to-know&tbnid=TTpAbWa5oorIZM&vet=12ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ..i&docid=DLeHzjzHiNI-bM&w=2000&h=1333&q=private%20jet%20plane&ved=2ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ" />
       <% end %>
     </div>
-    <div class="col-6">
+    <div class="col-4">
+      <div class="card-bo text-xs-left">
       <h1><% @booking.user %></h1>
-        <ul style="list-style-type:none;">
-          <li><strong> Jet model :</strong><em><%= @booking.jet.model %></em></li>
-          <li><strong> Jet location :</strong><em><%= @booking.jet.location %></em></li>
-          <li><strong> Jet capacity :</strong><em><%= @booking.jet.passenger_capacity %></em></li>
-          <li><strong> Booking ID :</strong><em><%= @booking.jet_id %></em></li>
-          <li><strong> Booking start date :</strong><em><%= @booking.start_date %></em></li>
-          <li><strong> Booking end date :</strong><em><%= @booking.end_date %></em></li>
-          <li><strong> Description :</strong><em><%= @booking.jet.description %></em></li>
-        </ul>
+        <h2><strong><%= @booking.jet.model %></strong></h2><br>
+          <h3>
+          <p><strong> Jet location :</strong><em><%= @booking.jet.location %></em></p>
+          <p><strong> Jet capacity :</strong><em><%= @booking.jet.passenger_capacity %></em></p>
+          <p><strong> Booking ID :</strong><em><%= @booking.jet_id %></em></p>
+          <p><strong> Booking start date :</strong><br><em><%= @booking.start_date %></em></p>
+          <p><strong> Booking end date :</strong><br><em><%= @booking.end_date %></em></p>
+          <p><strong> Description :</strong><br><em><%= @booking.jet.description %></em></p>
+        </h3>
           <div class="cancel d-flex justify-content-end">
      <%= link_to "CANCEL", user_booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary mb-n3" %>
       </div>
     </div>
   </div>
 </div>
+</div>
+
+
