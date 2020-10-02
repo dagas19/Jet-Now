@@ -32,7 +32,7 @@
               <%= f.input :fuel_consumption, label: "Consumption", placeholder: "e.g. 25l/km" %>
             </div>
           </div>
-            <%= f.input :location, Jet::LOCATIONS, prompt: :translate %>
+            <%= f.input :location, collection: Jet::LOCATIONS, prompt: :translate %>
             <%= f.input :photo, as: :file %>
             <%= f.input :description, label: "Description about the jet", placeholder: "e.g. Very nice and cosy jet, also very fast and quiet" %>
           <div class="d-flex inline-block justify-content-center align-items-center">
