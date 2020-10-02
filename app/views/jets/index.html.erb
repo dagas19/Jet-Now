@@ -41,13 +41,14 @@
       </div>
       <div>
         <%= link_to "Learn More", jet_path(jet), class: "btn btn-primary more" %>
+        <% link_to '',  jet_path(jet), :class => "stretched-link" %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
 <script type="text/javascript">
-    document.getElementById("d").onclick = function () {
-        location.href = "http://localhost:3000/jets/1";
+    document.getElementById("myButton").onclick = function () {
+        location.href = "www.yoursite.com";
     };
 </script>
