@@ -23,7 +23,7 @@
           </div>
           <div class="row">
             <div class="col-4">
-              <%= f.input :passenger_capacity, label: "capacity", placeholder: "e.g. 15 seats"%>
+              <%= f.input :passenger_capacity, label: "capacity", placeholder: "e.g. 15 seats", collection: Jet::PASSENGERS, prompt: :translate %>
             </div>
             <div class="col-4">
                <%= f.input :max_range, label: "Range", placeholder: "e.g. 3000km" %>
@@ -32,7 +32,7 @@
               <%= f.input :fuel_consumption, label: "Consumption", placeholder: "e.g. 25l/km" %>
             </div>
           </div>
-            <%= f.input :location, placeholder: "(km/h)", class: "form-control font-weight-bold" %>
+            <%= f.input :location, Jet::LOCATIONS, prompt: :translate %>
             <%= f.input :photo, as: :file %>
             <%= f.input :description, label: "Description about the jet", placeholder: "e.g. Very nice and cosy jet, also very fast and quiet" %>
           <div class="d-flex inline-block justify-content-center align-items-center">

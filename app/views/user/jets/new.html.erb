@@ -24,7 +24,7 @@
           </div>
           <div class="row">
             <div class="col-4">
-              <%= f.input :passenger_capacity, label: "capacity", placeholder: "e.g. 15 seats"%>
+              <%= f.input :passenger_capacity, label: "capacity", placeholder: "e.g. 15 seats", collection: Jet::PASSENGERS, prompt: :translate %>
             </div>
             <div class="col-4">
                <%= f.input :max_range, label: "Range", placeholder: "e.g. 3000km" %>
