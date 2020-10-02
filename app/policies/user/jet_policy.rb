@@ -20,4 +20,12 @@ class User::JetPolicy < ApplicationPolicy
       false
     end
   end
+
+  def update?
+    if user == record.user
+      true
+    else
+      false
+    end
+  end
 end
