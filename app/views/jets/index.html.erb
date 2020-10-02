@@ -8,32 +8,26 @@
     <hr>
   </div>
 </div>
-<div class="container">
-    <%= simple_form_for "", url: jets_path, method: :get, wrapper_mappings: {
-    boolean:       :custom_boolean,
-    check_boxes:   :custom_collection,
-    date:          :custom_multi_select,
-    datetime:      :custom_multi_select,
-    file:          :custom_file,
-    radio_buttons: :custom_collection,
-    range:         :custom_range,
-    time:          :custom_multi_select,
-    select:        :custom_multi_select
+<div class="container mt-3">
+    <%= simple_form_for "", url: jets_path, wrapper: :inline_form,
+  html: { class: "form-inline" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
   } do |f| %>
-      <%= f.input :passenger, as: :radio_buttons, collection: Jet::PASSENGERS, wrapper: :custom_collection_inline %>
-      <%= f.input :city, placeholder: "please select city", collection: Jet::LOCATIONS, prompt: :translate, placeholder_text: "-- Select strands --" %>
+      <%= f.label 'You can pick a city', class: "p-2" %>
+      <%= f.input :city, label: "You can select city", placeholder_text: "please select city", collection: Jet::LOCATIONS, prompt: :translate, placeholder_text: "-- Select strands --" %>
       <div class="form-group row mb-0">
         <div class="col-sm-9 offset-sm-3">
-      <%= f.submit class: "btn btn-primary btn-lg" %>
+      <%= f.submit value: "search", class: "btn btn-outline-secondary", style: "border-radius: 5px;" %>
       </div>
   </div>
     <% end %>
 </div>
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row justify-content-center">
     <% @jets.each do |jet| %>
-    <div class="col-xs-12 col-sm-6 col-lg-3 mb-4 spec">
-      <div class="card text" style="width: 16rem; height: 19rem;">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 spec">
+      <div id="d" class="card text" style="width: 16rem; height: 19rem;">
         <% if jet.photo.attached? %>
         <%= cl_image_tag jet.photo.key, width: 600, height: 200, crop: :fit, class: "hover" %>
         <% else %>
@@ -52,3 +46,8 @@
     <% end %>
   </div>
 </div>
+<script type="text/javascript">
+    document.getElementById("d").onclick = function () {
+        location.href = "http://localhost:3000/jets/1";
+    };
+</script>
