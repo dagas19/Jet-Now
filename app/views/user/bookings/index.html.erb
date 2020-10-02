@@ -1,26 +1,33 @@
-<div class="container text-dark">
-  <h1>Here are your bookings</h1>
-
-   <div class="container">
-    <div class="row">
-      <% @bookings.each do |b| %>
-        <div class="col-12">
-          <div class="card-product d-flex border mb-5 mt-3">
-           <% if b.jet.photo.attached? %>
-              <%= cl_image_tag b.jet.photo.key %>
-            <% else %>
-              <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn-image.departures.com%2Fsites%2Fdefault%2Ffiles%2F1572446921%2Fheader-general-private-jet-on-tarmac-BESTJETCOMP1019.jpg&imgrefurl=https%3A%2F%2Fwww.departures.com%2Ftravel%2Ftop-private-jet-companies-to-know&tbnid=TTpAbWa5oorIZM&vet=12ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ..i&docid=DLeHzjzHiNI-bM&w=2000&h=1333&q=private%20jet%20plane&ved=2ahUKEwj63pTjhJHsAhWigM4BHcUDDfkQMygBegUIARDWAQ" />
-            <% end %>
-            <div class="card-product-infos">
-              <h2><%= b.jet.model %> | <span class="location"> <%= b.jet.location %> </span></h2>
-              <p>You're booking starts <span class="card-start-date"> <%= b.start_date %> </span> and ends <span> <%= b.end_date %></span>.</p>
-              <p>Booking ID: <%= b.id %></p>
-            <%= link_to "booking details", user_booking_path(b) %>
+<div class="container text-dark mb-5">
+  <% if @bookings.count == 0 %>
+    <div class="no-jets">
+      <h4 class="mt-5">You do not have any bookings yet<span>...</span></h4>
+      <%= link_to 'Book a Jet', new_jet_booking_path, :class => "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="yes-jets">
+     <h1 class="text-center mb-5">Your Bookings</h1>
+     <div class="container">
+      <div class="row d-flex justify-content-center">
+        <% @bookings.each do |b| %>
+          <div class="col-xs-12 col-lg-6 d-flex justify-content-center">
+            <div class="card-product d-flex border mb-3">
+             <% if b.jet.photo.attached? %>
+                <%= cl_image_tag b.jet.photo.key %>
+              <% else %>
+                <img src="https://w7.pngwing.com/pngs/1006/271/png-transparent-airplane-aircraft-flight-computer-icons-private-jet-angle-airplane-flight-thumbnail.png" />
+              <% end %>
+              <div class="card-product-infos">
+                <h2><%= b.jet.model %> <span class="divider">|</span> <span class="location"> <%= b.jet.location %> </span></h2>
+                <ul class="list-unstyled">
+                  <li> Starts: <%= b.start_date %> </li>
+                  <%= link_to '',  user_booking_path(b), :class => "stretched-link" %>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
+  <% end %>
 </div>
