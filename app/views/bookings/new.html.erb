@@ -1,12 +1,24 @@
-<div class="dates">
-  <div class="form-inputs">
-    <div class="form-row justify-content-center">
-      <%= simple_form_for([@jet, @booking]) do |f| %>
-        <%= f.input :start_date, as: :string, label: "Date from", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
-        <%= f.input :end_date, as: :string, label: 'Date to'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
-        <%= f.submit "book", class: "btn btn-primary btn-lg btn-block btn-booking" %>
-      <% end %>
-    </div>
+<div class="bottom d-flex justify-content-center align-items-center mb-5">
+  <div style="margin-right: 50px;">
+    <h3 class="display-5">Pick your time</h3>
+  </div>
+  <div>
+    <hr>
   </div>
 </div>
-<div class="widget-content" data-unavailable="<%= @jet.unavailable_dates.to_json %>">
+<div class="container bord text-center p-5">
+  <h1>Please select date</h1>
+  <div class="dates">
+    <div class="form-inputs">
+      <div class="form-row justify-content-center p-2">
+        <%= simple_form_for([@jet, @booking]) do |f| %>
+          <%= f.input :start_date, as: :string, label: "Date from", placeholder: "e.g. 22-02-2020", wrapper_html: { class: "inline_field_wrapper" } %>
+          <%= f.input :end_date, as: :string, label: 'Date to'.html_safe, placeholder: "e.g. 22-02-2021", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
+          <%= f.submit "BOOK NOW", class: "btn btn-primary btn-block btn-booking" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="widget-content" data-unavailable="<%= @jet.unavailable_dates.to_json %>">
+</div>
+</div>
