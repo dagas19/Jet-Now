@@ -31,10 +31,10 @@ user18 = User.create(password: "covid19sdf", email: "Oliver@gmail.com")
 
 
 jet1 = Jet.create(model: "Dassault Falcon 6X", max_speed: 740, max_range: 3400, fuel_consumption: 55, description: "includes music recording studio", price_hourly: 6200, user: user8,location: "Paris", passenger_capacity: 5)
-jet2 = Jet.create(model: "Learjet 23", max_speed: 600, max_range: 2510, fuel_consumption: 40, description: "set up with bar and conference table", price_hourly: 2000, user: user2,location: "Paris", passenger_capacity: 10)
+jet2 = Jet.create(model: "Pilatus PC-24", max_speed: 590, max_range: 4200, fuel_consumption: 35, description: "set up for yoga studio", price_hourly: 2900, user: user3,location: "Rome", passenger_capacity: 15)
 jet3 = Jet.create(model: "Global 7500", max_speed: 500, max_range: 2400, fuel_consumption: 70, description: "set up with snooker table", price_hourly: 7000, user: user3,location: "Rome", passenger_capacity: 5)
 jet4 = Jet.create(model: "Cessna Citation Longitude", max_speed: 550, max_range: 4000, fuel_consumption: 90, description: "comes with Michel star chef", price_hourly: 8000, user: user3,location: "Paris", passenger_capacity: 15)
-jet5 = Jet.create(model: "Pilatus PC-24", max_speed: 590, max_range: 4200, fuel_consumption: 35, description: "set up for yoga studio", price_hourly: 2900, user: user3,location: "Rome", passenger_capacity: 15)
+jet5 = Jet.create(model: "Learjet 23", max_speed: 600, max_range: 2510, fuel_consumption: 40, description: "set up with bar and conference table", price_hourly: 2000, user: user2,location: "Paris", passenger_capacity: 10)
 jet6 = Jet.create(model: "HondaJet Elite", max_speed: 900, max_range: 4400, fuel_consumption: 70, description: "set up as a casino", price_hourly: 8300, user: user1,location: "Paris", passenger_capacity: 5)
 jet7 = Jet.create(model: "Grumman Gulfstream II", max_speed: 501, max_range: 2000, fuel_consumption: 50, description: "set up with horizontal sleeping positions and shower", price_hourly: 5000, user: user1,location: "London", passenger_capacity: 10)
 jet8 = Jet.create(model: "Phenom 100V+", max_speed: 680, max_range: 3600, fuel_consumption: 40, description: "includes DJ, bar and bouncer", price_hourly: 5200, user: user7,location: "London", passenger_capacity: 10)
@@ -108,8 +108,8 @@ booking10 = Booking.create(user: user16 , jet:jet21 , start_date:"2020-12-18" , 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541406/DA00031637_S_jjqita.jpg')
 jet1.photo.attach(io: file, filename: 'v1601541406/DA00031637_S_jjqita.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601552826/56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg')
-jet2.photo.attach(io: file, filename: '56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541215/85600_1567628467_msjnsq.jpg')
+jet2.photo.attach(io: file, filename: '85600_1567628467_msjnsq.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541073/global-7500-bombardier-belly_murbic.jpg')
 jet3.photo.attach(io: file, filename: 'global-7500-bombardier-belly_murbic.jpg', content_type:'image/png')
@@ -117,8 +117,8 @@ jet3.photo.attach(io: file, filename: 'global-7500-bombardier-belly_murbic.jpg',
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601474025/ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg')
 jet4.photo.attach(io: file, filename: 'ultimate-jet-news-Cessna-Citation-Longitude-provisional-type-certification-1280x640_rin7t8.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601541215/85600_1567628467_msjnsq.jpg')
-jet5.photo.attach(io: file, filename: '85600_1567628467_msjnsq.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601552826/56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg')
+jet5.photo.attach(io: file, filename: '56ee07b5fb235ddb109feda94ab4fe8f_oxnkhb.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/dd0q8x2lk/image/upload/v1601543158/5c784e0126289855b3078b17_nymqhu.jpg')
 jet6.photo.attach(io: file, filename: 'v1601543158/5c784e0126289855b3078b17_nymqhu.jpg', content_type:'image/png')
