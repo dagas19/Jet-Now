@@ -1,32 +1,38 @@
 <div class="container text-dark">
-  <h1>Here are your Jets</h1>
-
-   <div class="container">
-    <div class="row">
-      <% @jets.each do |j| %>
-        <div class="col-12">
-          <div class="card-product d-flex border mb-5 mt-3">
-           <% if j.photo.attached? %>
-              <%= cl_image_tag j.photo.key %>
-            <% else %>
-              <img src="https://w7.pngwing.com/pngs/1006/271/png-transparent-airplane-aircraft-flight-computer-icons-private-jet-angle-airplane-flight-thumbnail.png" />
-            <% end %>
-            <div class="card-product-infos">
-              <h2><%= j.model %> | <span class="location"> <%= j.location %> </span></h2>
-              <ul class="list-unstyled">
-                <li> Max Passengers: <%= j.passenger_capacity %> </li>
-                <li> Max Speed: <%= j.max_speed %> km/hr</li>
-                <li> Jet ID: <%= j.id %> </li>
-
-              </ul>
+  <% if @jets.count == 0 %>
+    <div class="no-jets">
+      <h4 class="mt-5">You do not have any jets yet<span>...</span></h4>
+      <%= link_to 'Add a Jet', new_user_jet_path, :class => "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="yes-jets">
+     <h1 class="text-center">Your Jets</h1>
+     <div class="container">
+      <div class="row d-flex justify-content-center">
+        <% @jets.each do |j| %>
+          <div class="col-8">
+            <div class="card-product d-flex border mb-5 mt-3">
+             <% if j.photo.attached? %>
+                <%= cl_image_tag j.photo.key %>
+              <% else %>
+                <img src="https://w7.pngwing.com/pngs/1006/271/png-transparent-airplane-aircraft-flight-computer-icons-private-jet-angle-airplane-flight-thumbnail.png" />
+              <% end %>
+              <div class="card-product-infos">
+                <h2><%= j.model %> <span class="divider">|</span> <span class="location"> <%= j.location %> </span></h2>
+                <ul class="list-unstyled">
+                  <li> Max Passengers: <%= j.passenger_capacity %> </li>
+                  <li> Max Speed: <%= j.max_speed %> km/hr</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
+  <% end %>
 </div>
+
+
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
         location.href = "www.yoursite.com";
