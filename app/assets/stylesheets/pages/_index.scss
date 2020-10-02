@@ -1,13 +1,20 @@
 // Import page-specific CSS files here.
 @import "home";
 
-card-product {
+.card-product {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  width: 450px;
+  line-height: 200%;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
 }
 
 .card-product img {
@@ -35,6 +42,32 @@ card-product {
 }
 
 .location {
-  color: $lightblue;
+  color: $red;
 }
 
+
+ .no-jets {
+  width: 450px;
+  margin: 0 auto;
+  height: 200px;
+  border-radius: 15px;
+  border: 2px solid $red;
+  padding-top: 8px;
+
+  span {
+    color: $red;
+  }
+
+  a {
+    margin-top: 30px;
+  }
+
+ }
+
+.yes-jets {
+  margin-top: 32px;
+}
+
+.divider {
+  color: $lightblue;
+}
